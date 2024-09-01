@@ -10,6 +10,11 @@ import Kids from './Kids';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Cartpage from './Cartpage';
+import { FaBeer, FaRegUser } from 'react-icons/fa';
+import { MdOutlineShoppingCart } from 'react-icons/md';
+import { SiPuma } from 'react-icons/si';
+import { BiLogIn } from 'react-icons/bi';
+import Login from './Login';
 
 
 
@@ -17,9 +22,9 @@ function App() {
   return (
     <BrowserRouter>
     <div className='App'>
-      <div className='blackheader'>EXTRA 5% DISCOUNT FOR ALL ONLINE PAYMENT </div>
+          <div className='blackheader'>EXTRA 5% DISCOUNT FOR ALL ONLINE PAYMENT </div>
       <div className='headerbox'>
-      <Link className="navitem" to="home"><img className='logo' src={img1}></img></Link>
+      <Link className="navitems" to="home"><SiPuma /></Link>
       <div className='category'> 
           <p><Link className='navitem' to="Men">MEN</Link></p>
           <p><Link className='navitem' to="Women">WOMEN</Link></p> 
@@ -27,11 +32,12 @@ function App() {
 
         </div>
         <div className='login'> 
-          <div className='search'>
-            <input type="text" placeholder="search..."></input>
+          <div className='signup'>
+            <p><Link className='navitems1' to = "Login"><FaRegUser /></Link></p>
           </div>
+          
           {/* <p><Link className='navitem' to="SignIn">SIGNIN</Link></p>  */}
-          <p><Link className='navitem' to="Cartpage">Cartpage</Link></p> 
+          <p><Link className='navitems1' to="Cartpage"><MdOutlineShoppingCart /></Link></p> 
           {/* <p><Link className='navitem' to="SignUp">SIGNUP</Link></p> */}
         </div>
         </div> 
@@ -48,7 +54,7 @@ function App() {
         <Route path="/Women" element={<Women/>}/>
         <Route path="/Kids" element={<Kids/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
-        <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="/Login" element={<Login/>}/>
         <Route path="/Cartpage" element={<Cartpage/>}/>
       </Routes>
     </div>

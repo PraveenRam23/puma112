@@ -13,8 +13,8 @@ function Home() {
   const{cartprd,setCartprd}=StoreState();
 
 
-  function addtocart(name,price,image){
-    const a={id:1,name:name,price:price,image:image}
+  function addtocart(name,price,image,id){
+    const a={id:id,name:name,price:price,image:image}
     setCart([...cart,a])
   }
 
@@ -31,8 +31,8 @@ function Home() {
           {cartprd.map((a)=>
           <div key={a.id} className='prodbox'><img src={a.image} className='prodimg'></img>
           <div className='prodname'>{a.name}</div>
-            <div className='prodprice'>{a.price}</div>
-            <button className='addtocart' onClick={()=>addtocart(a.name,a.price,a.image)}>Add to cart</button> 
+            <div className='prodprice'> &#8377;{a.price}</div>
+            <button className='button-27' onClick={()=>addtocart(a.name,a.price,a.image,a.id)}>Add to cart</button> 
           </div>
         )}
         </div>

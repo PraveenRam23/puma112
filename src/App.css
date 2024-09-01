@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .App{
     border: 2px solid #ffffff;
     height: 100%;
@@ -45,16 +48,78 @@
     justify-content: space-evenly;
     align-items: end;
 }
-.search{
-  
-    border: 2px solid #000000;
-    margin: 40px px 0px 40px;
-    height: 30px;
-    width:40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.signup{
+    border: 2px; 
+}
 
+.register-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* height: 100vh;  */
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.register-form{
+   justify-content: center; 
+   align-items: center;
+   /* height: 100vh; */
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0,0,0.1);
+   max-width: 400px;
+   width: 100%;
+}
+.register-form-h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.register-form label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.register-form input{
+    width: 380px;
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.register-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.register-form button:hover{
+    background-color: #555;
+}
+.register-form h3{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+
+
+.myaccount{
+    border: 2px solid rgb(255, 255, 255);
+    width: 300px;
+    font-family: Arial,sans-serif;
+    margin: 0px 0px 0px -300px;
+    
+    
 }
 
 .firstbox{
@@ -82,6 +147,21 @@
     text-decoration: none;
     color: #ffffff;
 }
+.navitems{
+    text-decoration: none;
+    color: #fff;
+   font-size: 40px;
+   display: flex;
+    margin:auto;
+}
+.navitems1{
+    text-decoration: none;
+    color: #fff;
+   font-size: 25px;
+   display: flex;
+    margin:auto;`
+
+.navitem:hover{text-decoration: underline;}
 
 
 .menshirt{
@@ -101,10 +181,6 @@
     height: 40vh;
     width: 25%;
 }
-
-
-
-
 
 .productpage{
     display: grid;
@@ -126,20 +202,23 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     
 }
-.prodbox:hover{border: 1px solid rgb(0, 0, 0);}
+.prodbox:hover .prodimg{transform: scale(1.1);transition: 0.5s ease-in-out; }
 
 .prodimg{
     height:318px;
-    width:318px;
+    width:100%;
     align-items: center;
+    
 }
 .prodname{
     height: 50px;
     width:auto;
-    margin:0px 0px 0px 0px;
+    margin-top: 10px;
     font-size:15px;
+    align-self: flex-start;
 }
 .prodprice{
     height:50px;
@@ -151,6 +230,7 @@
     align-items: center;
     margin:0px 0px 0px 220px;   
 }
+.addtocart:hover{border: 1px;}
 .menshirt{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -163,6 +243,9 @@
     border: 2px solid rgb(255, 255, 255);
     height: auto;
     width:auto ;
+}
+.cancel{
+    margin: -73px 0px 0px 670px;
 }
 .crtprodname{
     border: 2px solid rgb(255, 255, 255);
@@ -187,4 +270,46 @@
     height: 260px;
    
    
+}
+
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  
+  min-width: 0;
+  outline: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-self: flex-end;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

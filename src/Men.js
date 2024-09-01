@@ -5,8 +5,8 @@ function Men(){
     const{menprod,setMenprod}=StoreState();
     const{cart,setCart}=StoreState();
 
-    function addtocart(name,price,image){
-        const men={id:1,name:name,price:price,image:image}
+    function addtocart(name,price,image,id){
+        const men={id:id,name:name,price:price,image:image,}
         setCart([...cart,men])
     }
     return(
@@ -16,7 +16,7 @@ function Men(){
                 <img src={men.image} className="prodimg"></img>
                 <div className="prodname">{men.name}</div>
                 <div className="prodprice">{men.price}</div>
-                <button className="addtocart" onClick={()=>addtocart(men.name,men.price,men.image)}>Add to cart</button>
+                <button className="addtocart" onClick={()=>addtocart(men.name,men.price,men.image,men.id)}>Add to cart</button>
             </div>
             )}
         </div>
